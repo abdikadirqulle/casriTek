@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Check, HelpCircle } from "lucide-react"
+import { Check, ChevronDown, HelpCircle } from "lucide-react"
 import {
   Table,
   TableBody,
@@ -19,79 +19,13 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { useRouter } from "next/navigation"
+import { useState } from "react"
+import { faqs, plans } from "@/constants"
 
 const PricingPage = () => {
   const navigate = useRouter()
-  const plans = [
-    {
-      name: "Starter Plan",
-      price: "$500",
-      description:
-        "Best for small businesses and personal projects starting their digital journey.",
-      features: [
-        "5-page responsive website",
-        "Custom domain setup assistance",
-        "Basic SEO setup",
-        "Contact form integration",
-        "1 month free maintenance",
-      ],
-      deliveryTime: "7-10 business days",
-      idealFor: ["Entrepreneurs", "Freelancers"],
-      popular: false,
-    },
-    {
-      name: "Professional Plan",
-      price: "$1,500",
-      description:
-        "Perfect for growing businesses looking to establish a robust online presence.",
-      features: [
-        "Up to 15 custom pages",
-        "Mobile-first responsive design",
-        "Advanced SEO integration",
-        "E-commerce functionality (50 products)",
-        "Blog with CMS",
-        "2 months free maintenance",
-        "Third-party integrations",
-      ],
-      deliveryTime: "15-20 business days",
-      idealFor: ["Small-to-medium businesses", "Startups"],
-      popular: true,
-    },
-    {
-      name: "Enterprise Plan",
-      price: "$5,000+",
-      description: "Comprehensive solutions for businesses with complex needs.",
-      features: [
-        "Unlimited pages and features",
-        "Custom web application development",
-        "Advanced UI/UX design",
-        "Scalability for high-traffic",
-        "Dedicated project manager",
-        "Performance optimization",
-        "6 months free maintenance",
-      ],
-      deliveryTime: "Based on project scope",
-      idealFor: ["Enterprises", "Large-scale platforms"],
-      popular: false,
-    },
-  ]
-  const faqs = [
-    {
-      question: "What happens after I select a plan?",
-      answer:
-        "Our team will contact you within 24 hours to discuss your project requirements and next steps.",
-    },
-    {
-      question: "Can I upgrade my plan later?",
-      answer:
-        "Yes, you can upgrade your plan at any time. We'll help you transition smoothly to the new plan.",
-    },
-    {
-      question: "Do you offer discounts for nonprofits or startups?",
-      answer:
-        "Yes, we offer special pricing for nonprofits and early-stage startups. Contact us to learn more.",
-    },
-  ]
+  const [open, setOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -221,21 +155,29 @@ const PricingPage = () => {
         <div className="space-y-6">
           {faqs.map((faq) => (
             <Card key={faq.question}>
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <HelpCircle className="h-5 w-5 text-primary" />
-                  <CardTitle className="text-lg">{faq.question}</CardTitle>
+              <CardHeader className="flex justify-between w-full">
+                <div className="flex items-center justify-between w-full">
+                  <div className="flex items-center gap-2">
+                    <HelpCircle className="h-5 w-5 text-primary" />
+                    <CardTitle className="text-lg">{faq.question}</CardTitle>
+                  </div>
+                  <ChevronDown
+                    className={`h-7 w-7 text-primary cursor-pointer ${
+                      open ? "rotate-180" : ""
+                    }`}
+                    onClick={() => setOpen(!open)}
+                  />
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-secondary/80">{faq.answer}</p>
+                {open && <p className="text-secondary/80">{faq.answer}</p>}
               </CardContent>
             </Card>
           ))}
         </div>
       </section>
       {/* CTA Section */}
-      <section className="px-4 py-16 bg-accent text-white text-center">
+      <section className="px-4 py-16 mb-14 bg-accent text-white text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">
             Not Sure Which Plan to Choose?
