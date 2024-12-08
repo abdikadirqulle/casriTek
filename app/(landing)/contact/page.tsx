@@ -14,11 +14,18 @@ import {
 } from "lucide-react"
 import { useForm } from "react-hook-form"
 
+interface FormData {
+  name: string
+  email: string
+  phone?: string // Optional field
+  message: string
+}
+
 const ContactPage = () => {
-  const { register, handleSubmit, reset } = useForm()
+  const { register, handleSubmit, reset } = useForm<FormData>()
   const { toast } = useToast()
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormData) => {
     console.log(data)
     toast({
       description: "Message sent successfully!",
