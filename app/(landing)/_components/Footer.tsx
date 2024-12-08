@@ -4,6 +4,10 @@ import { Mail, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useToast } from "@/hooks/use-toast"
+import Image from "next/image"
+import Link from "next/link"
+
+import logo from "@/public/casritek/logo.png"
 
 const Footer = () => {
   const { toast } = useToast()
@@ -20,7 +24,17 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">CasriTek</h3>
+            <Link href="/" className="flex-shrink-0 flex gap-0 items-center">
+              <Image
+                src={logo}
+                alt="logo"
+                className="mr-2"
+                width={30}
+                height={30}
+              />
+              <span className="text-2xl font-bold">CasriTek</span>
+            </Link>
+            {/* <h3 className="text-2xl font-bold">CasriTek</h3> */}
             <p className="text-white/80">
               Empowering businesses through innovative web solutions.
             </p>

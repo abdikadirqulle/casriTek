@@ -87,8 +87,12 @@ const Portfolio = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <div className="absolute top-1/2 -translate-y-1/2 left-12 xl:left-2">
+              <CarouselPrevious />
+            </div>
+            <div className="absolute top-1/2 -translate-y-1/2 right-12 xl:right-2">
+              <CarouselNext />
+            </div>
           </Carousel>
         </div>
       </div>
