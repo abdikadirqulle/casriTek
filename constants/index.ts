@@ -35,7 +35,7 @@ export const plans = [
   },
   {
     name: "Enterprise Plan",
-    price: "$5,000+",
+    price: "Custom pricing",
     description: "Comprehensive solutions for businesses with complex needs.",
     features: [
       "Unlimited pages and features",
