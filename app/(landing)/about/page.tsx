@@ -1,56 +1,27 @@
 import { ArrowRight, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import casritekTeam from "@/public/about/about.jpg"
+import abdikadir from "@/public/about/abdikadir-qulle.jpg"
+import user from "@/public/about/user.png"
+import { milestones } from "@/constants"
 
 const AboutUs = () => {
-  const milestones = [
-    {
-      year: "2018",
-      title: "Company Founded",
-      description: "CasriTek was established in Kismayo, Somalia",
-    },
-    {
-      year: "2019",
-      title: "First Major Client",
-      description: "Secured partnership with a FTSE 100 company",
-    },
-    {
-      year: "2020",
-      title: "Team Expansion",
-      description: "Grew to 25+ talented professionals",
-    },
-    {
-      year: "2021",
-      title: "International Presence",
-      description: "Opened offices in Manchester and Edinburgh",
-    },
-    {
-      year: "2022",
-      title: "Industry Recognition",
-      description: "Won 'Best Web Development Agency' award",
-    },
-    {
-      year: "2023",
-      title: "Innovation Leader",
-      description: "Launched AI-powered development solutions",
-    },
-  ]
-
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "Abdikadir qulle",
       role: "CEO & Founder",
-      image: "photo-1581091226825-a6a2a5aee158",
+      image: abdikadir,
     },
     {
       name: "Michael Chen",
       role: "Technical Director",
-      image: "photo-1581092795360-fd1ca04f0952",
+      image: user,
     },
     {
       name: "Emma Williams",
       role: "Design Lead",
-      image: "photo-1486312338219-ce68d2c6f44d",
+      image: user,
     },
   ]
 
@@ -105,19 +76,31 @@ const AboutUs = () => {
                     </p>
                   </div>
                 </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-6 w-6 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-secondary">Our Goal</h3>
+                    <p className="text-secondary/80">
+                      To bridge the gap between technology and businesses,
+                      enabling them to thrive in the digital era by creating
+                      solutions that are not only visually stunning but also
+                      scalable and impactful.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <Button variant="outline" className="group">
+              {/* <Button variant="outline" className="group">
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              </Button> */}
             </div>
             <div className="relative animate-fade-up delay-200">
               <Image
-                src={``}
+                src={casritekTeam}
                 alt="Team at work"
                 className="rounded-2xl shadow-xl"
                 width={500}
-                height={256}
+                height={500}
               />
             </div>
           </div>
@@ -141,7 +124,7 @@ const AboutUs = () => {
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <Image
-                  src={``}
+                  src={member.image}
                   alt={member.name}
                   className="w-full h-64 object-cover"
                   width={500}

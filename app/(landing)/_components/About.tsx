@@ -1,5 +1,8 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import Image from "next/image"
+import about from "@/public/about/about.jpg"
 
 const About = () => {
   return (
@@ -14,14 +17,24 @@ const About = () => {
               solutions. Our passion for technology and commitment to excellence
               drives us to create exceptional web experiences.
             </p>
-            <Button variant="outline" className="group">
-              Learn More About Us
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            <Button variant="ghost">
+              <Link href="/about" className="group flex items-center">
+                Learn More About Us
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </div>
           <div className="relative animate-fade-up delay-200">
             <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl">
-              <div className="absolute inset-0 hero-pattern opacity-20 rounded-2xl"></div>
+              <div className="absolute inset-0 hero-pattern opacity-20 rounded-2xl">
+                <Image
+                  src={about}
+                  alt="about"
+                  className="w-full h-full object-cover"
+                  width={500}
+                  height={500}
+                />
+              </div>
             </div>
           </div>
         </div>

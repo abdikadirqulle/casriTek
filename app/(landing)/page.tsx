@@ -6,6 +6,8 @@ import Testimonials from "./_components/Testimonials"
 import Portfolio from "./_components/Portfolio"
 import About from "./_components/About"
 import Contact from "./_components/Contact"
+import ContactPage from "./contact/page"
+import { TrustedCompanies } from "./_components/TrustedCompanies"
 
 const Home = () => {
   return (
@@ -14,7 +16,7 @@ const Home = () => {
       <About />
       <Services />
       <Portfolio />
-      <Companies />
+      <TrustedCompanies />
       <Testimonials />
       <Contact />
     </div>

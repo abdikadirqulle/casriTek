@@ -29,12 +29,32 @@
   }
 }
 
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground font-sans;
+  }
+
+  /* Smooth animation performance */
+  .animate-scroll-left,
+  .animate-scroll-right {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: animation-play-state 0.2s ease;
   }
 }
 

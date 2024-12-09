@@ -58,6 +58,14 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "scroll-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-50% - 2rem))" },
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(calc(-50% - 2rem))" },
+          "100%": { transform: "translateX(0)" },
+        },
         "fade-up": {
           "0%": {
             opacity: "0",
@@ -96,6 +104,8 @@ const config: Config = {
         },
       },
       animation: {
+        "scroll-left": "scroll-left 25s linear infinite",
+        "scroll-right": "scroll-right 25s linear infinite",
         "fade-up": "fade-up 0.5s ease-out",
         "fade-down": "fade-down 0.5s ease-out",
         "accordion-down": "accordion-down 0.2s ease-out",

@@ -66,6 +66,14 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="/pricing"
+                  className="hover:text-primary transition-colors"
+                >
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a
                   href="/contact"
                   className="hover:text-primary transition-colors"
                 >
@@ -78,16 +86,32 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Connect With Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://www.facebook.com/casritek"
+                target="_blank"
+                className="hover:text-primary transition-colors"
+              >
                 <Facebook size={24} />
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://twitter.com/casritek"
+                target="_blank"
+                className="hover:text-primary transition-colors"
+              >
                 <Twitter size={24} />
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://www.linkedin.com/company/casritek"
+                target="_blank"
+                className="hover:text-primary transition-colors"
+              >
                 <Linkedin size={24} />
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://www.instagram.com/casritek"
+                target="_blank"
+                className="hover:text-primary transition-colors"
+              >
                 <Instagram size={24} />
               </a>
             </div>

@@ -8,34 +8,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
-
-const projects = [
-  {
-    title: "E-commerce Platform",
-    description: "A modern online shopping experience",
-    image: "placeholder.svg",
-  },
-  {
-    title: "Healthcare Portal",
-    description: "Patient management system",
-    image: "placeholder.svg",
-  },
-  {
-    title: "Educational Platform",
-    description: "Online learning made simple",
-    image: "placeholder.svg",
-  },
-  {
-    title: "Hotel Management System",
-    description: "A comprehensive hotel booking platform",
-    image: "placeholder.svg",
-  },
-  {
-    title: "Social Media App",
-    description: "Connect with friends and share updates",
-    image: "placeholder.svg",
-  },
-]
+import { projects } from "@/constants"
 
 const Portfolio = () => {
   return (

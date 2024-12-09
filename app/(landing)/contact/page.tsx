@@ -1,5 +1,7 @@
 "use client"
 
+import { useForm } from "react-hook-form"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -12,7 +14,6 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react"
-import { useForm } from "react-hook-form"
 
 interface FormData {
   name: string
@@ -81,8 +82,56 @@ const ContactPage = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>
+            <div className="bg-accent text-white rounded-xl p-8">
+              <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <Mail className="h-5 w-5 text-primary" />
+                  <span>info@casritek.com</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <span>+252 61 7797802</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  <span>Kismayo, Somalia</span>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <h4 className="font-semibold mb-4">Office Hours</h4>
+                <div className="space-y-2 text-white/80">
+                  <p>Saturday - Thursday: 9:00 AM - 6:00 PM</p>
+                  <p>Friday: Closed</p>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <h4 className="font-semibold mb-4">Follow Us</h4>
+                <div className="flex space-x-4">
+                  <a
+                    href="https://linkedin.com/company/casritek"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://twitter.com/casritek"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    <Twitter className="h-6 w-6" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
+          {/* map section */}
           <div className="space-y-8 lg:pl-8 animate-fade-up delay-200">
             <div className="aspect-square relative rounded-xl overflow-hidden">
               <iframe
@@ -94,54 +143,6 @@ const ContactPage = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
-            </div>
-
-            <div className="bg-accent text-white rounded-xl p-8">
-              <h3 className="text-xl font-bold mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <span>hello@casritek.com</span>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <span>+44 (0) 123 456 7890</span>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <span>London, United Kingdom</span>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <h4 className="font-semibold mb-4">Office Hours</h4>
-                <div className="space-y-2 text-white/80">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday - Sunday: Closed</p>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <h4 className="font-semibold mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    <Linkedin className="h-6 w-6" />
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    <Twitter className="h-6 w-6" />
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>

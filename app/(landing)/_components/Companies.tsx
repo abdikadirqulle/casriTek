@@ -1,14 +1,20 @@
 "use client"
-
-import { useEffect, useRef } from "react"
-import company1 from "../../../public/company1.svg"
-import company2 from "../../../public/company2.svg"
-import company3 from "../../../public/company3.svg"
-import company4 from "../../../public/company4.svg"
-import company5 from "../../../public/company5.svg"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
-const companies = [company1, company2, company3, company4, company5]
+import company1 from "@/public/companies/company1.svg"
+import company2 from "@/public/companies/company2.svg"
+import company3 from "@/public/companies/company3.svg"
+import company4 from "@/public/companies/company4.svg"
+import company5 from "@/public/companies/company5.svg"
+
+const companies = [
+  { logo: company1, id: 1, label: "Company 1" },
+  { logo: company2, id: 2, label: "Company 2" },
+  { logo: company3, id: 3, label: "Company 3" },
+  { logo: company4, id: 4, label: "Company 4" },
+  { logo: company5, id: 5, label: "Company 5" },
+]
 
 const Companies = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -52,8 +58,8 @@ const Companies = () => {
           {companies.map((logo, index) => (
             <div key={index} className="flex justify-center items-center p-4 ">
               <Image
-                src={logo}
-                alt={`Company ${index + 1}`}
+                src={logo.logo}
+                alt={logo.label}
                 className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300"
                 width={100}
                 height={40}

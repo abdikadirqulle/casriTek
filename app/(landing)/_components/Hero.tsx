@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const Hero = () => {
   return (
@@ -11,21 +12,26 @@ const Hero = () => {
             <span className="text-primary">Innovative Web Solutions</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-secondary/80 max-w-3xl mx-auto animate-fade-up">
-            We craft cutting-edge web experiences that transform your digital presence and drive business growth.
+            We craft cutting-edge web experiences that transform your digital
+            presence and drive business growth.
           </p>
           <div className="mt-10 flex justify-center gap-4 animate-fade-up">
-            <Button size="lg" className="group">
-              View Our Work
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline">
-              Get in Touch
-            </Button>
+            <Link href="/portfolio">
+              <Button size="lg" className="group">
+                View Our Work
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

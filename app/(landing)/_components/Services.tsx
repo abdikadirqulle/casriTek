@@ -8,6 +8,7 @@ import {
   Headphones,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const services = [
   {
@@ -67,10 +68,12 @@ const Services = () => {
                 {service.title}
               </h3>
               <p className="text-secondary/80 mb-4">{service.description}</p>
-              <Button variant="ghost" className="group">
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/services">
+                <Button variant="ghost" className="group">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
