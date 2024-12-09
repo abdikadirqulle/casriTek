@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
+import { Analytics } from "@vercel/analytics/react"
 
 const WorkSans = localFont({
   src: "./fonts/WorkSansVF.ttf",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={`${WorkSans.variable} antialiased`}>
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   )
