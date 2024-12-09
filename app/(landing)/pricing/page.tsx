@@ -95,10 +95,10 @@ const PricingPage = () => {
               <CardFooter>
                 <Button
                   className="w-full"
-                  variant={plan.popular ? "default" : "outline"}
+                  variant={plan.popular ? "default" : "ghost"}
                   onClick={() => (window.location.href = "/contact")}
                 >
-                  Get Started
+                  {`${index == 2 ? "Contact sales" : "Get Started"}`}
                 </Button>
               </CardFooter>
             </Card>

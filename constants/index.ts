@@ -1,7 +1,7 @@
 export const plans = [
   {
     name: "Starter Plan",
-    price: "$500",
+    price: "$200 - $500",
     description:
       "Best for small businesses and personal projects starting their digital journey.",
     features: [
