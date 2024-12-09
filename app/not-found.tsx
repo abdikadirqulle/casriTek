@@ -1,6 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { Home, ArrowLeft } from "lucide-react"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 const NotFound = () => {
   const navigate = useRouter()
@@ -33,12 +34,11 @@ const NotFound = () => {
             Go Back
           </Button>
 
-          <Button
-            onClick={() => (window.location.href = "/")}
-            className="flex items-center gap-2"
-          >
-            <Home className="h-4 w-4" />
-            Return Home
+          <Button>
+            <Link href="/" className="flex items-center gap-2">
+              <Home className="h-4 w-4" />
+              Return Home
+            </Link>
           </Button>
         </div>
       </div>

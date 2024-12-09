@@ -18,12 +18,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { useRouter } from "next/navigation"
+
 import { useState } from "react"
 import { faqs, plans } from "@/constants"
+import Link from "next/link"
 
 const PricingPage = () => {
-  const navigate = useRouter()
   const [open, setOpen] = useState(false)
 
   return (
@@ -187,12 +187,8 @@ const PricingPage = () => {
             business needs. Let&apos;s discuss your project requirements and
             find the best solution together.
           </p>
-          <Button
-            size="lg"
-            variant="default"
-            onClick={() => (window.location.href = "/contact")}
-          >
-            Schedule a Consultation
+          <Button size="lg" variant="default">
+            <Link href="/contact">Schedule a Consultation</Link>
           </Button>
         </div>
       </section>
