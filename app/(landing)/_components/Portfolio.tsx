@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { projects } from "@/constants"
+import { DialogPortfolio } from "../portfolio/page"
 
 const Portfolio = () => {
   return (
@@ -50,10 +51,7 @@ const Portfolio = () => {
                         <p className="text-secondary/80 mb-4">
                           {project.description}
                         </p>
-                        <Button variant="ghost" className="group">
-                          View Project
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        </Button>
+                        <DialogPortfolio project={project} />
                       </div>
                     </div>
                   </div>
