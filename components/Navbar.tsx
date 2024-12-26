@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button"
 import logo from "@/public/casritek/logo.png"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -16,6 +18,7 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Pricing", path: "/pricing" },
     { name: "Portfolio", path: "/portfolio" },
+    // { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ]
 
@@ -44,12 +47,18 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-secondary hover:text-primary transition-colors"
+                className={`${
+                  pathname === item.path
+                    ? "text-primary hover:text-secondary font-semibold "
+                    : "text-secondary hover:text-primary"
+                } transition-colors`}
               >
                 {item.name}
               </Link>
             ))}
-            <Button>Get Started</Button>
+            <Button>
+              <Link href="/contact">Get Started</Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
