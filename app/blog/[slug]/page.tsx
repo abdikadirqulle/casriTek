@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react"
-
-const page = () => {
-  return <div>page</div>
-}
-
-export default page
-=======
 import { notFound } from "next/navigation"
 import { readFile, readdir } from "fs/promises"
 import path from "path"
@@ -143,4 +134,3 @@ export default async function Post({ params }: { params: { slug: string } }) {
     </article>
   )
 }
->>>>>>> e0e75a858fcadee3e516faccf68b29fb687e3627
