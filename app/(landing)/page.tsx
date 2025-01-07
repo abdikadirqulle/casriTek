@@ -6,6 +6,7 @@ import About from "./_components/About"
 import Contact from "./_components/Contact"
 import { TrustedCompanies } from "./_components/TrustedCompanies"
 import Pricing from "./_components/Pricing"
+import Companies from "./_components/Companies"
 
 const Home = () => {
   return (
@@ -14,7 +15,9 @@ const Home = () => {
       <About />
       <Services />
       <Portfolio />
-      <TrustedCompanies />
+
+      <Companies />
+      {/* <TrustedCompanies /> */}
       <Testimonials />
       <Pricing />
       <Contact />

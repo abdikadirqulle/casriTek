@@ -2,11 +2,11 @@
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 
-import company1 from "@/public/companies/company1.svg"
-import company2 from "@/public/companies/company2.svg"
-import company3 from "@/public/companies/company3.svg"
-import company4 from "@/public/companies/company4.svg"
-import company5 from "@/public/companies/company5.svg"
+import company1 from "@/public/companies/aws.png"
+import company2 from "@/public/companies/campus.png"
+import company3 from "@/public/companies/dragon.png"
+import company4 from "@/public/companies/edal.png"
+import company5 from "@/public/companies/ipro.png"
 
 const companies = [
   { logo: company1, id: 1, label: "Company 1" },
@@ -46,21 +46,27 @@ const Companies = () => {
   }, [])
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         ref={containerRef}
       >
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Trusted By Leading Companies
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-0">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">
+            Trusted By Leading Companies
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Join the thousands of businesses worldwide that trust us with their
+            operations
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center ">
           {companies.map((logo, index) => (
             <div key={index} className="flex justify-center items-center p-4 ">
               <Image
                 src={logo.logo}
                 alt={logo.label}
-                className="h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                className=" w-auto grayscale hover:grayscale-0 transition-all duration-300"
                 width={100}
                 height={40}
               />
