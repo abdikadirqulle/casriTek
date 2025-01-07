@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { projects } from "@/constants"
-import { DialogPortfolio } from "../portfolio/page"
+import { DialogPortfolio } from "@/components/DialogPortfolio"
 
 const Portfolio = () => {
   return (
