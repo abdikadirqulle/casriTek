@@ -1,8 +1,8 @@
-import { ArrowRight, Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Check } from "lucide-react"
+
 import Image from "next/image"
 import casritekTeam from "@/public/about/about.jpg"
-import abdikadir from "@/public/about/abdikadir-qulle.jpg"
+
 import user from "@/public/about/user.png"
 import { milestones } from "@/constants"
 
@@ -11,7 +11,7 @@ const AboutUs = () => {
     {
       name: "Abdikadir qulle",
       role: "CEO & Founder",
-      image: abdikadir,
+      image: "/about/abdikadir-qulle.jpg",
     },
     {
       name: "Michael Chen",
@@ -89,10 +89,6 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
-              {/* <Button variant="outline" className="group">
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button> */}
             </div>
             <div className="relative animate-fade-up delay-200">
               <Image

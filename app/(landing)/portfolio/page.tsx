@@ -5,64 +5,17 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
-
-const projects = [
-  {
-    title: "E-commerce Platform",
-    description: "A modern online shopping experience",
-    image: "placeholder.svg",
-    challenge:
-      "Creating a scalable and performant e-commerce platform that can handle high traffic and complex product configurations.",
-    solution:
-      "Implemented a microservices architecture with React and Node.js, utilizing Redis for caching and MongoDB for flexible data storage.",
-    results: [
-      "50% increase in conversion rate",
-      "30% faster page load times",
-      "99.9% uptime",
-    ],
-    technologies: ["React", "Node.js", "MongoDB", "Redis", "AWS"],
-  },
-  {
-    title: "Healthcare Portal",
-    description: "Patient management system",
-    image: "placeholder.svg",
-    challenge:
-      "Developing a secure and compliant healthcare portal that streamlines patient care and administrative tasks.",
-    solution:
-      "Built a HIPAA-compliant platform using React and .NET, with end-to-end encryption and role-based access control.",
-    results: [
-      "40% reduction in administrative time",
-      "95% patient satisfaction",
-      "Zero security incidents",
-    ],
-    technologies: ["React", ".NET", "SQL Server", "Azure", "HIPAA Compliance"],
-  },
-  {
-    title: "Educational Platform",
-    description: "Online learning made simple",
-    image: "placeholder.svg",
-    challenge:
-      "Creating an engaging and interactive learning platform that supports various content types and learning styles.",
-    solution:
-      "Developed a custom LMS using React and Python, with real-time collaboration features and adaptive learning paths.",
-    results: [
-      "85% course completion rate",
-      "4.8/5 user satisfaction",
-      "200% user growth",
-    ],
-    technologies: ["React", "Python", "PostgreSQL", "WebRTC", "AWS"],
-  },
-]
+import { projects } from "@/constants"
+import { DialogTrigger } from "@radix-ui/react-dialog"
 
 const Portfolio = () => {
-  const [selectedProject, setSelectedProject] = useState(null)
-
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,14 +47,7 @@ const Portfolio = () => {
                   {project.title}
                 </h3>
                 <p className="text-secondary/80 mb-4">{project.description}</p>
-                <Button
-                  variant="ghost"
-                  className="group"
-                  //   onClick={() => setSelectedProject(project)}
-                >
-                  View Details
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <DialogPortfolio project={project} />
               </div>
             </div>
           ))}
@@ -113,71 +59,79 @@ const Portfolio = () => {
 
 export default Portfolio
 
-// export const DialogPortfolio = () => {
-//   return (
-//     <Dialog
-//     open={selectedProject !== null}
-//     onOpenChange={() => setSelectedProject(null)}
-//   >
+// ProjectProps is the type for the project object
+interface ProjectProps {
+  title: string
+  description: string
+  image: string
+  challenge: string
+  solution: string
+  results: string[]
+  technologies: string[]
+}
 
-//       <DialogContent className="max-w-3xl">
-//         <DialogHeader>
-//           <DialogTitle>{selectedProject?.title}</DialogTitle>
-//           <DialogDescription>
-//             <div className="mt-4">
-//               <Image
-//                 src={selectedProject.image}
-//                 alt={selectedProject.title}
-//                 className="w-full aspect-video object-cover rounded-lg mb-6"
-//               />
-//               <div className="space-y-6">
-//                 <div>
-//                   <h4 className="font-semibold text-secondary mb-2">
-//                     Challenge
-//                   </h4>
-//                   <p className="text-secondary/80">
-//                     {selectedProject.challenge}
-//                   </p>
-//                 </div>
-//                 <div>
-//                   <h4 className="font-semibold text-secondary mb-2">
-//                     Solution
-//                   </h4>
-//                   <p className="text-secondary/80">
-//                     {selectedProject.solution}
-//                   </p>
-//                 </div>
-//                 <div>
-//                   <h4 className="font-semibold text-secondary mb-2">
-//                     Results
-//                   </h4>
-//                   <ul className="list-disc pl-5 text-secondary/80">
-//                     {selectedProject?.results.map((result, index) => (
-//                       <li key={index}>{result}</li>
-//                     ))}
-//                   </ul>
-//                 </div>
-//                 <div>
-//                   <h4 className="font-semibold text-secondary mb-2">
-//                     Technologies Used
-//                   </h4>
-//                   <div className="flex flex-wrap gap-2">
-//                     {selectedProject.technologies.map((tech, index) => (
-//                       <span
-//                         key={index}
-//                         className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-//                       >
-//                         {tech}
-//                       </span>
-//                     ))}
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </DialogDescription>
-//         </DialogHeader>
-//       </DialogContent>
-//     )}
-//   </Dialog>
-//   )
-// }
+export const DialogPortfolio = ({ project }: { project: ProjectProps }) => {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="ghost" className="group">
+          View Details
+          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>{project.title}</DialogTitle>
+          <DialogDescription>
+            <div className="mt-4">
+              <Image
+                src={project.image}
+                alt={project.title}
+                className="w-full aspect-video object-cover rounded-lg mb-6"
+                width={500}
+                height={500}
+              />
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-secondary mb-2">
+                    Challenge
+                  </h4>
+                  <p className="text-secondary/80">{project.challenge}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-secondary mb-2">
+                    Solution
+                  </h4>
+                  <p className="text-secondary/80">{project.solution}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-secondary mb-2">Results</h4>
+                  <ul className="list-disc pl-5 text-secondary/80">
+                    {project?.results.map((result: string, index: number) => (
+                      <li key={index}>{result}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-secondary mb-2">
+                    Technologies Used
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech: string, index: number) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+  )
+}

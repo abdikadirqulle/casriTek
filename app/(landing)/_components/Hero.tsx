@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const Hero = () => {
   return (
-    <div className="hero-pattern min-h-screen flex items-center pt-16">
+    <div className="hero-pattern min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary animate-fade-down">
