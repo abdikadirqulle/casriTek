@@ -1,3 +1,29 @@
+// testimonials
+export const testimonials = [
+  {
+    name: "Abdijbar abdi",
+    role: "sales, Agan Hotel",
+    content:
+      "CasriTek transformed our online presence with a beautiful, functional website that perfectly represents our brand.",
+    rating: 5,
+  },
+  {
+    name: "Eng farah",
+    role: "CEO, Anfac academy",
+    content:
+      "Working with CasriTek was a game-changer for our business. Their expertise and dedication are unmatched.",
+    rating: 5,
+  },
+  {
+    name: "Abdisalam Abdulahi",
+    role: "Marketing Director, Al-furaat company",
+    content:
+      "The team at CasriTek delivered beyond our expectations. Our new website has significantly improved our conversion rates.",
+    rating: 5,
+  },
+]
+
+// price plan
 export const plans = [
   {
     name: "Starter Plan",
@@ -51,6 +77,7 @@ export const plans = [
     popular: false,
   },
 ]
+// faqs
 export const faqs = [
   {
     question: "What happens after I select a plan?",
@@ -105,55 +132,44 @@ export const milestones = [
 
 // projects
 export const projects = [
+  //   e-learning platform
   {
-    title: "E-commerce Platform",
-    description: "A modern online shopping experience",
-    image: "placeholder.svg",
-    challenge:
-      "Creating a scalable and performant e-commerce platform that can handle high traffic and complex product configurations.",
-    solution:
-      "Implemented a microservices architecture with React and Node.js, utilizing Redis for caching and MongoDB for flexible data storage.",
-    results: [
-      "50% increase in conversion rate",
-      "30% faster page load times",
-      "99.9% uptime",
-    ],
-    technologies: ["React", "Node.js", "MongoDB", "Redis", "AWS"],
-  },
-  {
-    title: "Healthcare Portal",
-    description: "Patient management system",
-    image: "placeholder.svg",
-    challenge:
-      "Developing a secure and compliant healthcare portal that streamlines patient care and administrative tasks.",
-    solution:
-      "Built a HIPAA-compliant platform using React and .NET, with end-to-end encryption and role-based access control.",
-    results: [
-      "40% reduction in administrative time",
-      "95% patient satisfaction",
-      "Zero security incidents",
-    ],
-    technologies: ["React", ".NET", "SQL Server", "Azure", "HIPAA Compliance"],
-  },
-  {
-    title: "Educational Platform",
+    title: "E-learning Platform",
     description: "Online learning made simple",
-    image: "placeholder.svg",
+    image: "/portfolio/learnZone.png",
     challenge:
       "Creating an engaging and interactive learning platform that supports various content types and learning styles.",
     solution:
-      "Developed a custom LMS using React and Python, with real-time collaboration features and adaptive learning paths.",
+      "Developed a custom LMS using React and Node.js, with real-time collaboration features and adaptive learning paths.",
     results: [
       "85% course completion rate",
       "4.8/5 user satisfaction",
       "200% user growth",
     ],
-    technologies: ["React", "Python", "PostgreSQL", "WebRTC", "AWS"],
+    technologies: ["React", "Tailwind css", "MongoDB", "Github", "Vercel"],
   },
+  //   hospital management system
   {
-    title: "Hotel Management System",
-    description: "A comprehensive hotel booking platform",
-    image: "placeholder.svg",
+    title: "Healthcare Management",
+    description: "Hospital Management System",
+    image: "/portfolio/hosbital-m-system.png",
+    challenge:
+      "Developing a secure and compliant healthcare portal that streamlines patient care and administrative tasks.",
+    solution:
+      "Built a HIPAA-compliant platform using PHP and MySQL, with end-to-end encryption and role-based access control.",
+    results: [
+      "40% reduction in administrative time",
+      "95% patient satisfaction",
+      "Zero security incidents",
+    ],
+    technologies: ["PHP", "HTMl", "CSS", "MySQL"],
+  },
+
+  //   hotel staff management
+  {
+    title: "Hotel Staff Management",
+    description: "A comprehensive hotel Staff Manager",
+    image: "/portfolio/staff-manager.png",
     challenge:
       "Creating an engaging and interactive learning platform that supports various content types and learning styles.",
     solution:
@@ -163,6 +179,58 @@ export const projects = [
       "4.7/5 user satisfaction",
       "200% user growth",
     ],
-    technologies: ["React", "Next.js", "PostgreSQL", "shadcn/ui", "AWS"],
+    technologies: ["React", "Next.js", "PostgreSQL", "shadcn/ui", "Vercel"],
+  },
+  //   task management system using PHP, HTML, and CSS.
+  {
+    title: "Task Management System",
+    description: "A simple task management system",
+    image: "/portfolio/taskflow.png",
+    challenge:
+      "Developing a simple task management system that allows users to create, assign, and track tasks.",
+    solution:
+      "Built a simple system using PHP, HTML, and CSS, with a responsive design and user-friendly interface.",
+    results: ["20% increase in productivity", "90% user satisfaction"],
+    technologies: ["PHP", "HTML", "CSS", "MySQL"],
+  },
+  //   online flight booking app
+  {
+    title: "Online Flight Booking App",
+    description: "A comprehensive flight booking platform",
+    image: "/portfolio/esafar.png",
+    challenge:
+      "Developing a secure and compliant flight booking platform that streamlines travel planning and booking.",
+    solution:
+      "Built a secure platform using React and Node.js, with end-to-end encryption and role-based access control.",
+    results: [
+      "40% reduction in administrative time",
+      "95% customer satisfaction",
+      "Zero security incidents",
+    ],
+    technologies: [
+      "React",
+      "Tailwind css",
+      "Node.js",
+      "prisma",
+      "MongoDB",
+      "shadcn/ui",
+      "firebase",
+    ],
+  },
+
+  {
+    title: "E-commerce Platform",
+    description: "A modern online shopping experience",
+    image: "/portfolio/megamart.png",
+    challenge:
+      "Creating a scalable and performant e-commerce platform that can handle high traffic and complex product configurations.",
+    solution:
+      "Implemented a microservices architecture with React and Node.js, utilizing Redis for caching and MongoDB for flexible data storage.",
+    results: [
+      "50% increase in conversion rate",
+      "30% faster page load times",
+      "99.9% uptime",
+    ],
+    technologies: ["React", "Node.js", "MongoDB", "Tailwind css", "Vercel"],
   },
 ]

@@ -124,11 +124,13 @@ const services = [
 
 const ServicesPage = () => {
   return (
-    <section className="py-20 bg-accent">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
-          <p className="text-white/80 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-secondary mb-4">
+            Our Services
+          </h2>
+          <p className="text-secondary/80 max-w-2xl mx-auto">
             We offer a comprehensive range of web development services to help
             your business succeed in the digital world.
           </p>

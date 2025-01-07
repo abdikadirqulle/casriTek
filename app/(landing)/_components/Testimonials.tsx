@@ -1,28 +1,5 @@
+import { testimonials } from "@/constants"
 import { Star } from "lucide-react"
-
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart",
-    content:
-      "CasriTek transformed our online presence with a beautiful, functional website that perfectly represents our brand.",
-    rating: 5,
-  },
-  {
-    name: "Michael Chen",
-    role: "Founder, GrowthLabs",
-    content:
-      "Working with CasriTek was a game-changer for our business. Their expertise and dedication are unmatched.",
-    rating: 5,
-  },
-  {
-    name: "Emma Davis",
-    role: "Marketing Director, InnovateCo",
-    content:
-      "The team at CasriTek delivered beyond our expectations. Our new website has significantly improved our conversion rates.",
-    rating: 5,
-  },
-]
 
 const Testimonials = () => {
   return (

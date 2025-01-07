@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Check, ChevronDown, HelpCircle } from "lucide-react"
+import { Check, HelpCircle } from "lucide-react"
 import {
   Table,
   TableBody,
@@ -19,13 +19,10 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
-import { useState } from "react"
 import { faqs, plans } from "@/constants"
 import Link from "next/link"
 
 const PricingPage = () => {
-  const [open, setOpen] = useState(false)
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -161,16 +158,10 @@ const PricingPage = () => {
                     <HelpCircle className="h-5 w-5 text-primary" />
                     <CardTitle className="text-lg">{faq.question}</CardTitle>
                   </div>
-                  <ChevronDown
-                    className={`h-7 w-7 text-primary cursor-pointer ${
-                      open ? "rotate-180" : ""
-                    }`}
-                    onClick={() => setOpen(!open)}
-                  />
                 </div>
               </CardHeader>
               <CardContent>
-                {open && <p className="text-secondary/80">{faq.answer}</p>}
+                <p className="text-secondary/80">{faq.answer}</p>
               </CardContent>
             </Card>
           ))}
