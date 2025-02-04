@@ -14,6 +14,7 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react"
+import { sendEmail } from "@/lib/mail"
 
 interface FormData {
   name: string
@@ -26,12 +27,19 @@ const ContactPage = () => {
   const { register, handleSubmit, reset } = useForm<FormData>()
   const { toast } = useToast()
 
-  const onSubmit = (data: FormData) => {
-    console.log(data)
-    toast({
-      description: "Message sent successfully!",
-    })
-    reset()
+  const onSubmit = async (data: FormData) => {
+    const result = await sendEmail(data)
+
+    if (result.success) {
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you soon.",
+        duration: 5000,
+      })
+      reset()
+    } else {
+      alert("Failed to send message. Please try again.")
+    }
   }
 
   return (
@@ -87,15 +95,22 @@ const ContactPage = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <Mail className="h-5 w-5 text-primary" />
-                  <span>info@casritek.com</span>
+                  <a
+                    href="mailto:info@casritek.com"
+                    className="hover:underline"
+                  >
+                    <span>info@casritek.com</span>
+                  </a>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>+252 61 7797802</span>
+                  <a href="tel:+252617797802" className="hover:underline">
+                    <span>+252 61 7797802</span>
+                  </a>
                 </div>
                 <div className="flex items-center space-x-4">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>Kismayo, Somalia</span>
+                  <span>Kismayo - Somalia</span>
                 </div>
               </div>
 
