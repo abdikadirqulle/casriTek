@@ -15,6 +15,7 @@ import {
   Twitter,
 } from "lucide-react"
 import { sendEmail } from "@/lib/mail"
+import { useState } from "react"
 
 interface FormData {
   name: string
@@ -25,9 +26,12 @@ interface FormData {
 
 const ContactPage = () => {
   const { register, handleSubmit, reset } = useForm<FormData>()
+  const [isSending, setIsSending] = useState(false)
+
   const { toast } = useToast()
 
   const onSubmit = async (data: FormData) => {
+    setIsSending(true)
     const result = await sendEmail(data)
 
     if (result.success) {
@@ -37,6 +41,7 @@ const ContactPage = () => {
         duration: 5000,
       })
       reset()
+      setIsSending(false)
     } else {
       alert("Failed to send message. Please try again.")
     }
@@ -85,8 +90,8 @@ const ContactPage = () => {
                   {...register("message", { required: true })}
                 />
               </div>
-              <Button type="submit" className="w-full">
-                Send Message
+              <Button type="submit" className="w-full" disabled={isSending}>
+                {isSending ? "Sending..." : "Send Message"}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </form>

@@ -87,7 +87,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Connect With Us</h4>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/casritek"
+                href="https://www.facebook.com/casritek1"
                 target="_blank"
                 className="hover:text-primary transition-colors"
               >
@@ -108,7 +108,7 @@ const Footer = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="https://www.instagram.com/casritek"
+                href="https://www.instagram.com/casritek1"
                 target="_blank"
                 className="hover:text-primary transition-colors"
               >

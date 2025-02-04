@@ -11,10 +11,10 @@ const WorkSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Casritek - Web Development Solutions",
+  title: "Casritek - Web Development Agency",
   description: "Expert web development services for businesses and individuals",
   icons: {
-    icon: "/casritek/logo.png",
+    icon: "/casritek/casritek-logo.png",
   },
 }
 
