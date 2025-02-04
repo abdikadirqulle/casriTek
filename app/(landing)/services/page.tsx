@@ -147,36 +147,38 @@ const ServicesPage = () => {
                 {service.title}
               </h3>
               <p className="text-secondary/80 mb-4">{service.description}</p>
-              <Accordion type="single" collapsible>
+              {/* <Accordion type="single" collapsible>
                 <AccordionItem value="features">
                   <AccordionTrigger>Features</AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="list-disc pl-5 space-y-2">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="text-secondary/80">
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
+                  <AccordionContent> */}
+              <h1 className="font-semibold mt-3">features</h1>
+              <ul className="list-disc pl-5 space-y-2">
+                {service.features.map((feature, i) => (
+                  <li key={i} className="text-secondary/80">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              {/* </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="benefits">
-                  <AccordionTrigger>Benefits</AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="list-disc pl-5 space-y-2">
-                      {service.benefits.map((benefit, i) => (
-                        <li key={i} className="text-secondary/80">
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
+                <AccordionTrigger>Benefits</AccordionTrigger>
+                  <AccordionContent> */}
+              <h1 className="font-semibold mt-3">benefits</h1>
+              <ul className="list-disc pl-5 space-y-2">
+                {service.benefits.map((benefit, i) => (
+                  <li key={i} className="text-secondary/80">
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+              {/* </AccordionContent>
                 </AccordionItem>
-              </Accordion>
-              <Button variant="ghost" className="group mt-4">
+              </Accordion> */}
+              {/* <Button variant="ghost" className="group mt-4">
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              </Button> */}
             </div>
           ))}
         </div>

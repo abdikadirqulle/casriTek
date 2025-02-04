@@ -12,6 +12,7 @@ import {
 import { Check } from "lucide-react"
 
 import { faqs, plans } from "@/constants"
+import Link from "next/link"
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -25,14 +26,11 @@ const Pricing = () => {
           every stage. Whether you&apos;re launching your first website or
           scaling an enterprise platform, we&apos;ve got you covered.
         </p>
-        <Button
-          size="lg"
-          variant="outline"
-          onClick={() => (window.location.href = "/contact")}
-          className="animate-fade-up"
-        >
-          Need a Custom Solution? Contact Us!
-        </Button>
+        <Link href="/contact">
+          <Button size="lg" variant="outline" className="animate-fade-up">
+            Need a Custom Solution? Contact Us!
+          </Button>
+        </Link>
       </section>
       {/* Pricing Cards */}
       <section className="px-4 py-16 max-w-7xl mx-auto">

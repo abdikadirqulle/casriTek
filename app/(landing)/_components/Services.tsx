@@ -64,16 +64,18 @@ const Services = () => {
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-secondary mb-2">
+              <h3 className="text-xl font-bold text-secondary mb-2 cursor-default">
                 {service.title}
               </h3>
-              <p className="text-secondary/80 mb-4">{service.description}</p>
-              <Link href="/services">
+              <p className="text-secondary/80 mb-4 cursor-default">
+                {service.description}
+              </p>
+              {/* <Link href="/services">
                 <Button variant="ghost" className="group">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           ))}
         </div>
