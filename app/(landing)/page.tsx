@@ -24,7 +24,7 @@ const Home = () => {
       <Pricing />
       {/* <Contact /> */}
       {/* CTA Section */}
-      <section className="px-4 py-16  bg-accent text-white text-center">
+      <section className="px-4 py-16  bg-secondary text-white text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">
             Not Sure Which Plan to Choose?

@@ -3,7 +3,7 @@ import { Star } from "lucide-react"
 
 const Testimonials = () => {
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20 bg-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl font-bold text-white mb-4">

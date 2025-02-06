@@ -32,18 +32,30 @@ const ContactPage = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsSending(true)
-    const result = await sendEmail(data)
+    try {
+      const result = await sendEmail(data)
 
-    if (result.success) {
+      if (result.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you soon.",
+          duration: 5000,
+        })
+        reset()
+      } else {
+        alert("Failed to send message. Please try again.")
+      }
+
+      //     throw new Error("Failed to send message")
+    } catch (error) {
       toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you soon.",
+        title: "Failed to send message",
+        description: "Please try again later.",
+        variant: "destructive",
         duration: 5000,
       })
-      reset()
+    } finally {
       setIsSending(false)
-    } else {
-      alert("Failed to send message. Please try again.")
     }
   }
 
