@@ -21,7 +21,7 @@ const Home = () => {
       <Companies />
       {/* <TrustedCompanies /> */}
       <Testimonials />
-      <Pricing />
+      {/* <Pricing /> */}
       {/* <Contact /> */}
       {/* CTA Section */}
       <section className="px-4 py-16  bg-secondary text-white text-center">
