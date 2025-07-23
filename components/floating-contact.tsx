@@ -22,13 +22,11 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>
 
-const resend = new Resend("re_RJF4i3Bw_7JTvR1dFyowf76W4o1mFhMjf")
-
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false)
 
   const [isSending, setIsSending] = useState(false)
-  const whatsappNumber = "+252617797802" // Replace with your WhatsApp number
+  const whatsappNumber = "+252612037075" // Replace with your WhatsApp number
   const whatsappMessage = "Hello! I'm interested in your services."
   const { toast } = useToast()
 

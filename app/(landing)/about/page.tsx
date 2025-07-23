@@ -47,7 +47,7 @@ const AboutUs = () => {
             <div className="space-y-6 animate-fade-up">
               <h2 className="text-3xl font-bold text-secondary">Our Story</h2>
               <p className="text-secondary/80">
-                Founded in 2018, CasriTek emerged from a vision to bridge the
+                Founded in 2024, CasriTek emerged from a vision to bridge the
                 gap between technical excellence and business success. What
                 started as a small team of dedicated developers has grown into a
                 full-service digital agency, trusted by businesses across the
@@ -104,7 +104,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 bg-secondary/5">
+      {/* <section className="py-16 bg-secondary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-secondary">Our Team</h2>
@@ -136,10 +136,10 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Milestones Section */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-secondary">Our Journey</h2>
@@ -169,7 +169,7 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

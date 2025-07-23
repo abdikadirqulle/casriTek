@@ -8,8 +8,8 @@ export const testimonials = [
     rating: 5,
   },
   {
-    name: "Eng farah",
-    role: "CEO, Anfac academy",
+    name: "Eng Amino Farah",
+    role: "Operations Manager, SomaliTech Solutions",
     content:
       "Working with CasriTek was a game-changer for our business. Their expertise and dedication are unmatched.",
     rating: 5,

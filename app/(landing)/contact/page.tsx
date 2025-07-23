@@ -121,13 +121,13 @@ const ContactPage = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="h-5 w-5 text-primary" />
-                  <a href="tel:+252617797802" className="hover:underline">
-                    <span>+252 61 7797802</span>
+                  <a href="tel:+252612037075" className="hover:underline">
+                    <span>+252 61 2037075</span>
                   </a>
                 </div>
                 <div className="flex items-center space-x-4">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>Kismayo - Somalia</span>
+                  <span>Kismayo, Somalia</span>
                 </div>
               </div>
 

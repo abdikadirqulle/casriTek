@@ -51,7 +51,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="h-5 w-5 text-primary" />
-                <span className="text-secondary">+252 61 7797802</span>
+                <span className="text-secondary">+252 61 2037075</span>
               </div>
               <div className="flex items-center space-x-4">
                 <MapPin className="h-5 w-5 text-primary" />
