@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
@@ -16,7 +16,41 @@ const About = () => {
               dedicated to transforming businesses through innovative digital
               solutions. Our passion for technology and commitment to excellence
               drives us to create exceptional web experiences.
-            </p>
+            </p>{" "}
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Check className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h3 className="font-semibold text-secondary">Our Mission</h3>
+                  <p className="text-secondary/80">
+                    To empower businesses through innovative digital solutions
+                    that drive growth and success.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Check className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h3 className="font-semibold text-secondary">Our Vision</h3>
+                  <p className="text-secondary/80">
+                    To be the leading force in digital transformation, setting
+                    new standards in web development excellence.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Check className="h-6 w-6 text-primary mt-1" />
+                <div>
+                  <h3 className="font-semibold text-secondary">Our Goal</h3>
+                  <p className="text-secondary/80">
+                    To bridge the gap between technology and businesses,
+                    enabling them to thrive in the digital era by creating
+                    solutions that are not only visually stunning but also
+                    scalable and impactful.
+                  </p>
+                </div>
+              </div>
+            </div>
             <Button variant="ghost">
               <Link href="/about" className="group flex items-center">
                 Learn More About Us
